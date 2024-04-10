@@ -33,7 +33,6 @@ describe("gettodos function", () => {
     test("checks todo list for added todo", () => {
         expect(getTodos(expected)).toEqual(expected);
         expect(getTodos(expected)).toHaveLength(3);
-
     });
     test("returns empty todoList", () => {
         expect(getTodos(emptyTodoList)).toBeFalsy();

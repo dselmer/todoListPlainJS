@@ -34,8 +34,8 @@ export const getTodos = (arr) => {
 const deleteTodos = (todoList, todo) => {
     if (todoList.includes(todo)) {
 
-        let todoItem = todoList.IndexOf(todo);
-        const newTodoList = todoList.toSplice(todoItem, 1)
+        let todoItemIndex = todoList.IndexOf(todo);
+        const newTodoList = todoList.toSplice(todoItemIndex, 1)
         originalTodoList.splice(0, originalTodoList.length)
         newTodoList.map((todoItem) => {
             originalTodoList.push(todoItem)
