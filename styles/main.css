@@ -96,6 +96,7 @@ input[type="text"] {
 .task{
     display:flex;
     align-items: center;
+    color: #616161;
     /* border:2px solid burlywood;  */
 }
 
