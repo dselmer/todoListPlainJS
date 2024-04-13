@@ -14,6 +14,7 @@ const todoList = [];
 
 function createButtons(btn) {
     if (btn === taskEditBtn) {
+        // creates edit task button
         btnContiner.appendChild(taskEditBtn);
         taskEditBtn.classList.add('btn', 'edit');
         taskEditBtn.setAttribute('value', 'Edit');
@@ -21,6 +22,7 @@ function createButtons(btn) {
         return
     }
     if (btn === taskDeleteBtn) {
+        // creates delete task button
         btnContiner.appendChild(taskDeleteBtn);
         taskDeleteBtn.classList.add('btn', 'delete');
         taskDeleteBtn.setAttribute('value', 'Delete');
@@ -29,6 +31,7 @@ function createButtons(btn) {
     }
 }
 function CreateTask(todo) {
+    // creates todo task and container
     container.appendChild(taskContiner);
     taskContiner.className = 'task-container';
     taskContiner.appendChild(task);
