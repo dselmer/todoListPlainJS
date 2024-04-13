@@ -126,5 +126,7 @@ width: 20%;
    background-color:  #0096FF;
    color: #FFFFFF;
    border-radius: 10px;
+   text-align: center;
+   cursor: pointer;
 
 }

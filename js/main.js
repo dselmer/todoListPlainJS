@@ -4,6 +4,7 @@ const container = document.querySelector('.container');
 const input = document.querySelector('.inputs');
 const submitBtn = document.querySelector('.submit');
 
+
 export const addTodos = (todo) => {
     const arr = [];
     if (!todo) return null
@@ -30,6 +31,20 @@ function submitHandler(node) {
         taskContiner.appendChild(task);
         task.className = 'task';
         task.innerText = todo;
+        const btnContiner = document.createElement("div");
+        taskContiner.appendChild(btnContiner);
+        btnContiner.className = 'btn-container';
+        const taskEditBtn = document.createElement("input");
+        btnContiner.appendChild(taskEditBtn);
+        taskEditBtn.classList.add('btn','edit');
+        taskEditBtn.setAttribute('value','Edit');
+        taskEditBtn.setAttribute('type','button');
+
+        const taskDeleteBtn = document.createElement("input");
+        btnContiner.appendChild(taskDeleteBtn);
+        taskDeleteBtn.classList.add('btn','delete');
+        taskDeleteBtn.setAttribute('value','Delete');
+        taskDeleteBtn.setAttribute('type','button');
     }
 }
 
