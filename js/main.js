@@ -8,6 +8,7 @@ const submitBtn = document.querySelector('.submit');
 
 let inputValue;
 const todoList = [];
+let editModeDone = false;
 
 
 
@@ -43,9 +44,12 @@ function createTask(todo,node) {
   
 
     newTask.addEventListener('change',function handleTododUpdate (e) {
-        // let newInputTodo = e.target.value;
+
       
         newInputTodo = e.target.value;
+       
+       
+
      
     })
 
@@ -61,7 +65,10 @@ function createTask(todo,node) {
             newInputTodo = '';
              taskContiner.removeChild(newTask);
              btnContiner.removeChild(updateBtn);
+             newTask.value = '';
         }
+
+      
         
          
         
