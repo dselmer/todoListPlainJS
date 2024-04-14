@@ -132,3 +132,12 @@ width: 20%;
    cursor: pointer;
 
 }
+
+.updateBtn{
+  background-color:  #aa00ff;
+  color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+
+}
