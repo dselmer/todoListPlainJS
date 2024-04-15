@@ -29,7 +29,7 @@ body {
   /* border: 2px solid red; */
   width: 1000px;
   max-width: 1000px;
-
+  overflow: scroll;
   height: 80%;
   background-color: #FAF9F6;
 }
@@ -91,8 +91,6 @@ input[type="text"] {
   padding-left: 20px;
   margin: 3% auto;
   background-color: #E5E4E2;
-
-
 }
 
 .task {
