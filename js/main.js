@@ -61,6 +61,10 @@ function createTask(todo, node) {
     taskDeleteBtn.classList.add('btn', 'delete');
     taskDeleteBtn.setAttribute('value', 'Delete');
     taskDeleteBtn.setAttribute('type', 'button');
+
+    taskDeleteBtn.addEventListener('click', function(){
+        container.removeChild(taskContiner);
+    })
 }
 
 function submitHandler(node) {
