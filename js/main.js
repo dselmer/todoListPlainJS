@@ -1,20 +1,13 @@
-
-
 const container = document.querySelector('.container');
 const input = document.querySelector('.inputs');
 const submitBtn = document.querySelector('.submit');
-
-
 
 let inputValue;
 const todoList = [];
 let editModeDone = false;
 
-
-
-function createTask(todo,node) {
-  let newInputTodo;
-    // newInputTodo.className = 'task';
+function createTask(todo, node) {
+    let newInputTodo;
     const taskContiner = document.createElement("div");
     container.appendChild(taskContiner);
     taskContiner.className = 'task-container';
@@ -30,53 +23,33 @@ function createTask(todo,node) {
     const taskEditBtn = document.createElement("input");
     let newTask = document.createElement("input");
     const updateBtn = document.createElement("input");
+    newTask.classList.add('editInput');
+    newTask.setAttribute('placeholder', 'update todo...');
 
     taskEditBtn.addEventListener("click", function () {
-       taskContiner.appendChild(newTask)
-
-        
+        taskContiner.appendChild(newTask)
         updateBtn.classList.add('btn', 'updateBtn');
         updateBtn.setAttribute('type', 'button');
         updateBtn.setAttribute('value', 'update');
         btnContiner.appendChild(updateBtn);
     })
 
-  
-
-    newTask.addEventListener('change',function handleTododUpdate (e) {
-
-      
+    newTask.addEventListener('change', function handleTododUpdate(e) {
         newInputTodo = e.target.value;
-       
-       
-
-     
     })
 
     updateBtn.addEventListener("click", function () {
-        console.log("clicked");
-        
-        //  taskContiner.replaceChild(newInputTodo, task)
-        if(!newInputTodo) {
+        if (!newInputTodo) {
             taskContiner.removeChild(newTask);
-            btnContiner.removeChild(updateBtn);  
-        }else{
+            btnContiner.removeChild(updateBtn);
+        } else {
             task.innerText = newInputTodo
             newInputTodo = '';
-             taskContiner.removeChild(newTask);
-             btnContiner.removeChild(updateBtn);
-             newTask.value = '';
+            taskContiner.removeChild(newTask);
+            btnContiner.removeChild(updateBtn);
+            newTask.value = '';
         }
-
-      
-        
-         
-        
-     
-      
     });
-
-
 
     btnContiner.appendChild(taskEditBtn);
     taskEditBtn.classList.add('btn', 'edit');
@@ -88,15 +61,11 @@ function createTask(todo,node) {
     taskDeleteBtn.classList.add('btn', 'delete');
     taskDeleteBtn.setAttribute('value', 'Delete');
     taskDeleteBtn.setAttribute('type', 'button');
-
 }
-
-
 
 function submitHandler(node) {
     for (const todo of node) {
-        createTask(todo,node);
-
+        createTask(todo, node);
     }
 }
 
